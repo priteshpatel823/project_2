@@ -5,37 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Adoption | Find my PETFriend!</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" 
+    integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
   </head>
   <body>
 <!--- Nav bar --->
 
-<div class="topnav" id="myTopnav">
-        
-  <a href="#home" class="active">
-      Find my PETfriend!</a>
-  <a href="#index.html">Home</a>
-  <a href="https://twitter.com/rescuegroupsorg?lang=en">
-    <span class="icon">
-      <i class="fa fa-twitter"></i>
-    </span>
-    Twitter</a>
-  <a href="https://github.com/priteshpatel823/Project_1">GitHub</a>
-  <a href="##adoption_page"> <span class="icon">
-    <i class="fa fa-petfriend"></i>
-  </span>Adoption Form</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
+<header class="header">
+  <a href="/" class="logo">Find my PETfriend!</a>
+  <input class="menu-btn" type="checkbox" id="menu-btn"/>
+  <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="https://twitter.com/rescuegroupsorg?lang=en" target="blank">Twitter</a></li>
+    <li><a href="#adoption_page">Adoption Options</a></li>
+    <li><a href="#testimonial">Testimonials</a></li>
+    <li><a href="">Login</a></li>
+  </ul>
+</header>
 
 <!-- Section -->
-
+<br><br><br>
 <section class="section">
     <div class="container">
       <h1 class="title is-1">Planning to Adopt a Pet?</h1>
@@ -148,7 +141,7 @@
 
  <!--- Testimonial --->
 
-  <div class="tile is-ancestor">
+  <div class="tile is-ancestor" id="testimonial">
     <div class="tile is-4 is-vertical is-parent">
       <div class="tile is-child box">
         <p class="title">Testimonial One:</p>
@@ -178,7 +171,7 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>Project #1</strong> || Developers: Madison Calvo, Reina Rivera, Tesh Patel, & Chase Harrington</a>
+        <strong>Project #2</strong> || Developers: Nehreet Kaur, Andrew Adams, Reina Rivera, Tesh Patel, & Chase Harrington
       </p>
     </div>
   </footer>
