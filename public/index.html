@@ -10,6 +10,42 @@
     integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <style type="text/css">
+    #slider {
+      overflow: hidden;
+    }
+    #slider figure {
+      position: relative;
+      width: 250%;
+      margin: 0;
+      left: 0;
+      animation: 20s slider infinite;
+    }
+    #slider figure img {
+      width: 20%;
+      float: left;
+    }
+
+    @keyframes slider {
+      0% {
+        left: 0%;
+      }
+      20% {
+        left: 0;
+      }
+      25% {
+        left: -155%;
+      }
+      45% {
+        left: -80%;
+      }
+      50% {
+        left: -90%;
+      }  
+
+    }
+    </style>
   </head>
   <body>
 <!--- Nav bar --->
@@ -31,7 +67,7 @@
 <br><br><br>
 <section class="section">
     <div class="container">
-      <h1>Planning to Adopt a Pet?</h1>
+      <h1 class="title">Planning to Adopt a Pet?</h1>
       <h4>
         Hi there! We've created a central app to help you adopt your new <strong>furry friend!</strong> 
         To get started, enter a zipcode, how far from the zipcode, and whether you want a dog or a cat to find your future pet a forever home.
@@ -115,7 +151,7 @@
         <div class="field is-grouped is-grouped-centered">
             <div class="control">
 
-                <button id="submit" class="button is-primary">Submit</button>
+                <button id="submit" class="button has-text-info-dark">Submit</button>
             </div>
         </div>
     </div>
@@ -168,9 +204,6 @@
       </div>
     </div>
   </div>
-
-
-
 
 <!--- Footer --->
   <footer class="footer" class="developers">
