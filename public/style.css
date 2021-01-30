@@ -43,6 +43,21 @@ a{
   transition: max-height .2s ease-out;
 }
 
+/* Hide user profile on initial load, there is JS that will unhide when user logs in*/
+.header .menu .profile {
+  display: none;
+}
+.header .menu .profile a {
+  display: inline !important;
+  border-right:none;
+  position: relative;
+  bottom: 15px;
+}
+.header .menu .profile img {
+  border-radius: 100%;
+  width: 50px;
+}
+
 .header .menu-icon{
   padding: 28px 20px;
   position: relative;

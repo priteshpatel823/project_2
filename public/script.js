@@ -9,6 +9,16 @@ function myFunction() {
 
 $(document).ready(function() {
 
+  // This file just does a GET request to figure out which user is logged in
+  // and updates the HTML on the page
+  $.get("/api/user_data").then(data => {
+    console.log(data);
+    $(".login").hide();
+    $(".profile").show();
+  }).fail(err => {
+    console.log("Your not logged in");
+  });
+
   /*$("#dog").on("click", function() {
     event.preventDefault();
     var queryURL = "https://dog.ceo/api/breeds/image/random"
