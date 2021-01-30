@@ -94,13 +94,12 @@ $(document).ready(function() {
           }
         })
       }).then(function(result) {
-        console.log(result);
   
         var queryURL2 = "https://api.rescuegroups.org/v5/public/orgs/search/";
 
         $.ajax({
           url: queryURL2,
-          method: "POST",
+          method: "GET",
           contentType: "application/json",
           headers: {
             Authorization: "ERWX75Rx"
@@ -119,6 +118,7 @@ $(document).ready(function() {
           })
         }).then(function(response) {
           var orgs = {};
+          console.log(response);
           for (var i = 0; i < response.data.length; i++) {
             orgs[response.data[i].id] = {
               name: response.data[i].attributes.name,

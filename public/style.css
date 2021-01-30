@@ -1,16 +1,10 @@
-body{
-  margin:0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #bbb;
-}
-
 /* navbar */
 a{
   color: #000;
 }
 
 .header{
-  background-color: #fff;
+  background-color: #f2dec5;
   box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
   position: fixed;
   width: 100%;
@@ -22,7 +16,7 @@ a{
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #a7bbbc;
 }
 
 .header ul a{
@@ -124,7 +118,7 @@ a{
   top: 0;
 }
 
-@media(min-width: 48em) {
+@media(min-width: 996px) {
   .header li {
     float: left;
   }
@@ -143,3 +137,23 @@ a{
 
 /* main */
 
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #df946a;
+}
+
+div{
+  color: #493831;
+}
+
+h3{
+  display: flex;
+  justify-content: center;
+  color: #493831;
+}
+
+.adoption_page{
+  display: flex;
+  justify-content: center;
+}
