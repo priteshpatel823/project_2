@@ -15,6 +15,7 @@ $(document).ready(function() {
     console.log(data);
     $(".login").hide();
     $(".profile").show();
+    $(".profile").children("img").attr("src",data.picture);
   }).fail(err => {
     console.log("Your not logged in");
   });
