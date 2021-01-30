@@ -100,7 +100,7 @@ $(document).ready(function() {
 
         $.ajax({
           url: queryURL2,
-          method: "GET",
+          method: "POST",
           contentType: "application/json",
           headers: {
             Authorization: "ERWX75Rx"
