@@ -6,11 +6,48 @@
 
     <title>Adoption | Find my PETFriend!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <style type="text/css">
+    
+    #slider {
+      overflow: hidden;
+    }
+    #slider figure {
+      position: relative;
+      width: 270%;
+      margin: 0;
+      left: 0;
+      animation: 20s slider infinite;
+    }
+    #slider figure img {
+      width: 20%;
+      float: left;
+    }
+
+    @keyframes slider {
+      0% {
+        left: 0;
+      }
+      20% {
+        left: 0;
+      }
+      25% {
+        left: -100%;
+      }
+      45% {
+        left: -100%;
+      }
+      50% {
+        left: -170%;
+      }
+    }
+    </style>
   </head>
   <body>
 <!--- Nav bar --->
@@ -47,9 +84,15 @@
     </div>
   </section>
 
-  <figure class="image">
-    <img src="./images/kidanddog.jpeg">
-</figure>
+  <div id="slider">
+    <figure>
+      <img src="./images/kidanddog.jpeg">
+      <img src="./images/pets1.jpeg">
+      <img src="./images/pets2.jpeg">
+      <img src="./images/pets3.jpeg">
+      <img src="./images/pets4.jpeg">
+    </figure>
+  </div>
 
 <!------ Tiles ------>
 <!--<section class="section">
