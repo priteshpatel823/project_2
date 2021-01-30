@@ -39,7 +39,7 @@ user have to login with google.
 # DESCRIPTION
 
 In this **application** our **FILE-STRUCTURE** is based
-on **MVC:MODELS VIEWS CONTOLLERS** .The
+on **MVC:MODELS VIEWS CONTROLLERS** .The
 main function of **MVC** is easy to understand the file structure, easy to 
 figure out where the **ERROR** is and where to go and fix it .By dividing applicationinto three logical parts, it's very easy for the **USERS** and 
 other **DEVELOPERS** have a smooth walkthrough of code.
@@ -53,7 +53,7 @@ at the computer when logged in.
 
 
  **passport-google-OAuth2**:-It lets you authenticate using Google in your Node.js applications.The Google OAuth 2.0 authentication strategy authenticates users using a **Google account** . The strategy requires a verify **callback**, which accepts these **credentials** and calls done providing a user, as well as options specifying a **client ID, client secret, and callback URL**.We have to access
- **GOOGLE CHROME DEVELOPER** in order to get**Id,SECRET and CALLBACK URL**.
+ **GOOGLE DEVELOPER CONSOLE** in order to get **Id,SECRET and CALLBACK URL**.
 
 
  **express**:-In order to get express , it's important to install NODE.js and then express .It provides a small but fast tool for HTTP servers, making it a good answer for single page applications, web sites, hybrids, or public HTTP APIs. 
@@ -84,7 +84,7 @@ A user session can be stored in two main ways with cookies: on the server or on 
 
 
 # GIT-HUB-REPOSITORY
-[GIT-HUB_REPOSITORY]()
+[GIT-HUB_REPOSITORY](https://github.com/priteshpatel823/project_2)
 
 # HEROKU-LINK
 [HEROKU-LINK]()
