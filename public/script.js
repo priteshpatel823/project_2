@@ -9,6 +9,16 @@ function myFunction() {
 
 $(document).ready(function() {
 
+  // This file just does a GET request to figure out which user is logged in
+  // and updates the HTML on the page
+  $.get("/api/user_data").then(data => {
+    console.log(data);
+    $(".login").hide();
+    $(".profile").show();
+  }).fail(err => {
+    console.log("Your not logged in");
+  });
+
   /*$("#dog").on("click", function() {
     event.preventDefault();
     var queryURL = "https://dog.ceo/api/breeds/image/random"
@@ -84,13 +94,12 @@ $(document).ready(function() {
           }
         })
       }).then(function(result) {
-        console.log(result);
   
         var queryURL2 = "https://api.rescuegroups.org/v5/public/orgs/search/";
 
         $.ajax({
           url: queryURL2,
-          method: "POST",
+          method: "GET",
           contentType: "application/json",
           headers: {
             Authorization: "ERWX75Rx"
@@ -109,6 +118,7 @@ $(document).ready(function() {
           })
         }).then(function(response) {
           var orgs = {};
+          console.log(response);
           for (var i = 0; i < response.data.length; i++) {
             orgs[response.data[i].id] = {
               name: response.data[i].attributes.name,
