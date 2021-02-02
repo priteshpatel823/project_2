@@ -205,72 +205,26 @@
     </div>
   </div>
 
-  <div class="container">
-    <article class="media comment-block">
-      <figure class="media-left">
-        <p class="image is-64x64">
-          <img src="https://bulma.io/images/placeholders/128x128.png">
-        </p>
-      </figure>
-      <div class="media-content">
-        <div class="content">
-          <p>
-            <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
-            <br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-          </p>
-        </div>
-      <nav class="level is-mobile">
-        <div class="level-left">
-          <a class="level-item">
-            <span class="icon is-small"><i class="fas fa-reply"></i></span>
-          </a>
-          <a class="level-item">
-            <span class="icon is-small"><i class="fas fa-retweet"></i></span>
-          </a>
-          <a class="level-item">
-            <span class="icon is-small"><i class="fas fa-heart"></i></span>
-          </a>
-        </div>
-      </nav>
-    </div>
-    <div class="media-right">
-      <button class="delete"></button>
-    </div>
-    </article>
+
+  <div class="tile is-parent box" id="past-comments-container">
+    <ul id="past-comments">
+        
+    </ul>
   </div>
-  <div class="container">
-    <button>Show more</button>
-  </div>
-  <div class="container">
-    <article class="media">
-      <figure class="media-left">
-        <p class="image is-64x64">
-          <img src="https://bulma.io/images/placeholders/128x128.png">
-        </p>
-      </figure>
-      <div class="media-content">
-        <div class="field">
-          <p class="control">
-            <textarea class="textarea" placeholder="Add a comment..."></textarea>
-          </p>
-        </div>
-        <nav class="level">
-          <div class="level-left">
-            <div class="level-item">
-              <a class="button is-info">Submit</a>
-            </div>
-          </div>
-          <div class="level-right">
-            <div class="level-item">
-              <label class="checkbox">
-                <input type="checkbox"> Press enter to submit
-              </label>
-            </div>
-          </div>
-        </nav>
+
+  <div class="title is-ancestor">
+    <div class="title is-parent box">
+    <h1>
+      What do you think of us? Leave a comment!
+    </h1>
+      <div class="is-child box">
+          <form method="POST" action="/" id="comment-section">
+              <label for="comment">Comment:</label><br>
+              <input type="text" id="comment" name="comment"><br>
+              <input type="submit" value="Post Comment">
+          </form>
       </div>
-    </article>
+    </div>
   </div>
 
 <!--- Footer --->

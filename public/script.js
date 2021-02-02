@@ -8,17 +8,60 @@ function myFunction() {
 }
 
 $(document).ready(function() {
+  let userInfo;
+  let pastComments;
+  const formListener = $('#comment-section');
+  const userComment = $('#comment');
 
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
   $.get("/api/user_data").then(data => {
     console.log(data);
+    userInfo = data;
     $(".login").hide();
     $(".profile").show();
     $(".profile").children("img").attr("src",data.picture);
   }).fail(err => {
     console.log("Your not logged in");
   });
+
+  $.get('/api/comments').then(data => {
+    console.log(data);
+    pastComments = data;
+    const commentDiv = $('#past-comments');
+   
+
+    pastComments.forEach(comment => {
+      console.log(comment);
+      let li = `<li>` + comment.comment + `</li>`;
+      commentDiv.append(li);
+      // li.html(JSON.stringify(comment.comment))
+      })
+  });
+
+ 
+
+  // 
+
+  // const createLi = document.createElement('li')
+
+  
+
+  // $('#past-comments').text(`${data[].comment}`);
+
+  formListener.on('submit', function(event){
+    event.preventDefault();
+    const newComment = {
+      comment: userComment.val(),
+      email: userInfo.email
+    }
+
+    console.log(newComment);
+    
+    $.post('/api/comments', newComment).then(function(){
+      console.log('Comment posted.');
+    })
+  })
 
   /*$("#dog").on("click", function() {
     event.preventDefault();
