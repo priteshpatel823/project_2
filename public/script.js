@@ -129,11 +129,11 @@ $(document).ready(function() {
   
           $("#pet-results")
             .html('<h4 class="has-text-centered is-size-3">Search Results</h4>')
-            .append('<div class="row">');
+            .append('<div class="columns is-multiline" id="pet-columns">');
   
           for (var i = 0; i < result.data.length - 5; i++) {
             var col = $("<div>")
-              .addClass("column is-4")
+              .addClass("column is-one-third")
               .attr("id", "petCard");
             var title = $("<h3>")
               .addClass("card-title has-text-weight-bold is-size-5")
@@ -171,7 +171,7 @@ $(document).ready(function() {
                 body.append(title, img, breed, sex, distance, orgName, orgUrl)
               )
             );
-            $("#pet-results .row").append(col);
+            $("#pet-columns").append(col);
           }
         });
       });
