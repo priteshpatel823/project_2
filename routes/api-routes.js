@@ -27,7 +27,9 @@ module.exports = function(app) {
     console.log(db.comment);
     db.comment.create({
       comment: req.body.comment,
-      email: req.body.email
+      email: req.body.email,
+      name: req.body.name,
+      picture: req.body.picture
     }).then(function(){
       res.status(307)
     }).catch(function(err){

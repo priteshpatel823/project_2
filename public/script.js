@@ -12,7 +12,6 @@ $(document).ready(function() {
   let pastComments;
   const formListener = $('#comment-section');
   const userComment = $('#comment');
-
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
   $.get("/api/user_data").then(data => {
@@ -33,7 +32,7 @@ $(document).ready(function() {
 
     pastComments.forEach(comment => {
       console.log(comment);
-      let li = `<li>` + comment.comment + `</li>`;
+      let li = `<li class='box is-full container column'>` + `<h1 class='title'>` + comment.name + `</h1>\n <div class='is-flex is-align-items-center'><img src='`+ comment.picture + `'/ class='pr-2'> <p class='title is-5'>`  + comment.comment + `</p></li> </div> <br />`;
       commentDiv.append(li);
       // li.html(JSON.stringify(comment.comment))
       })
@@ -53,7 +52,9 @@ $(document).ready(function() {
     event.preventDefault();
     const newComment = {
       comment: userComment.val(),
-      email: userInfo.email
+      email: userInfo.email,
+      name: userInfo.name,
+      picture: userInfo.picture
     }
 
     console.log(newComment);
@@ -172,11 +173,11 @@ $(document).ready(function() {
   
           $("#pet-results")
             .html('<h4 class="has-text-centered is-size-3">Search Results</h4>')
-            .append('<div class="row">');
+            .append('<div class="columns is-multiline" id="pet-columns">');
   
           for (var i = 0; i < result.data.length - 5; i++) {
             var col = $("<div>")
-              .addClass("column is-4")
+              .addClass("column is-one-third")
               .attr("id", "petCard");
             var title = $("<h3>")
               .addClass("card-title has-text-weight-bold is-size-5")
@@ -214,7 +215,7 @@ $(document).ready(function() {
                 body.append(title, img, breed, sex, distance, orgName, orgUrl)
               )
             );
-            $("#pet-results .row").append(col);
+            $("#pet-columns").append(col);
           }
         });
       });

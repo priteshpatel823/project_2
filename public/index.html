@@ -205,25 +205,30 @@
     </div>
   </div>
 
-  <div class="tile is-parent box" id="past-comments-container">
-    <ul id="past-comments">
-        
-    </ul>
-  </div>
+
+ 
 
   <div class="title is-ancestor">
-    <div class="title is-parent box">
+    <div class="title is-parent box columns">
+      <div class='column'>
     <h1>
       What do you think of us? Leave a comment!
     </h1>
-      <div class="is-child box">
-          <form method="POST" action="/" id="comment-section">
+      <div class="is-child box columns">
+          <form method="POST" action="/" id="comment-section" class='column'>
               <label for="comment">Comment:</label><br>
-              <input type="text" id="comment" name="comment"><br>
+              <input type="text" id="comment" name="comment" style='width:100%; height:50%; font-size: 20px;'><br>
               <input type="submit" value="Post Comment">
           </form>
+          </div>
       </div>
     </div>
+  </div>
+
+  <div class="tile is-parent" id="past-comments-container">
+    <ul id="past-comments">
+        
+    </ul>
   </div>
 
 <!--- Footer --->
