@@ -1,13 +1,19 @@
 {
     "development": {
-      "use_env_variable": "LOCALDB_URL",
-      "dialect": "mysql"
+     
+      "dialect": "mysql",
+      "username": "root",
+      "password": "password",
+      "database": "comments_db",
+      "host": "127.0.0.1",
+      "port":3306
     },
     "test": {
       "username": "root",
-      "password": "root",
+      "password": "password",
       "database": "comments_db",
       "host": "127.0.0.1",
+      "port":3306,
       "dialect": "mysql"
     },
     "production": {
